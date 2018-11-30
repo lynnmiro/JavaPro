@@ -1,9 +1,10 @@
 package application;
 	
 import javafx.application.Application;
-import javafx.stage.Stage;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.stage.Stage;
+import models.DaoModel;
 
 
 public class Main extends Application {
@@ -21,6 +22,10 @@ public class Main extends Application {
 	}
 	
 	public static void main(String[] args) {
-		launch(args);
+		
+		//launch(args);
+		
+		DaoModel dao = new DaoModel();
+		//dao.createTable();
 	}
 }
