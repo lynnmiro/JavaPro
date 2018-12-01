@@ -14,8 +14,9 @@
          </font></Label>
       <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@../../../../../Desktop/60208003-reserved-table-vector-icon-reservation-sign-restaurant-service-symbol.jpg" />
+            <Image url="@../../image/reserved.jpg" />
          </image>
+         
       </ImageView>
    </children>
 </AnchorPane>
