@@ -8,7 +8,7 @@ import java.sql.Connection;
 
 import dao.DBConnect;
 
-public class User extends DBConnect {
+public class UserModel extends DBConnect {
 
 	String userID;
 	String userFN;
@@ -18,17 +18,17 @@ public class User extends DBConnect {
 	String password;
 
 	// Default Constructor
-	public User() {
+	public UserModel() {
 
 	}
 
-	public User(String userId) {
+	public UserModel(String userId) {
 		this.userID = userId;
 		// TODO
 	}
 
-	public User getUser(String userId) {
-		User user = new User();
+	public UserModel getUser(String userId) {
+		UserModel user = new UserModel();
 		String query = "SELECT * FROM lnt_user WHERE userID = ?;";
 		Connection c = null;
 		PreparedStatement statement = null;
