@@ -10,7 +10,7 @@ public class ReservationController {
 	private LocalDateTime dateTime;
 	private int numOfGuests;
 	
-	public Reservation(int id, int resturantid, int customerid, int tableid, LocalDateTime dateTime, int numOfGuests) {
+	public ReservationController(int id, int resturantid, int customerid, int tableid, LocalDateTime dateTime, int numOfGuests) {
 		super();
 		this.id = id;
 		this.resturantid = resturantid;
