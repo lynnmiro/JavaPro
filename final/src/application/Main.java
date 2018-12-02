@@ -1,5 +1,5 @@
 package application;
-	
+
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -8,14 +8,13 @@ import javafx.stage.Stage;
 
 
 public class Main extends Application {
-public static Stage stage;
-	
+	public static Stage stage;
+
 	@Override
 	public void start(Stage primaryStage) {
 		try {
 			stage = primaryStage;
-			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass()
-					.getResource("/views/LoginView.fxml"));
+			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/LoginView.fxml"));
 			Scene scene = new Scene(root);
 			stage.setTitle("Login");
 			stage.setScene(scene);
@@ -25,8 +24,9 @@ public static Stage stage;
 			System.out.println("Error occured while inflating view: " + e);
 		}
 	}
+
 	public static void main(String[] args) {
 		launch(args);
-		
+
 	}
 }
