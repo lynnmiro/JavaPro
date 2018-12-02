@@ -4,9 +4,8 @@ public class CustomerController extends UserController implements CustomerOperat
 	
 	private String phoneNum;
 
-	public CustomerController(int id, String firstName, String lastName, String email, String password, String phoneNum) {
-		super(id, firstName, lastName, email, password);
-		this.phoneNum = phoneNum;
+	public CustomerController(int id, String email, String password) {
+		super(id, email, password);
 	}
 
 	@Override
