@@ -9,6 +9,7 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import models.LoginModel;
+import controllers.UserController;
 
 public class LoginController {
 
@@ -56,29 +57,60 @@ public class LoginController {
 	}
 
 	public void checkCredentials(String username, String password) {
-		Boolean isValid = model.getCredentials(username, password);
-		if (!isValid) {
+		
+		UserController user = model.getCredentials(username, password);
+		if (user == null) {
 			lblError.setText("User does not exist!");
 			return;
 		}
 		try {
 			AnchorPane root;
-			if (model.isAdmin() && isValid) {
-				// If user is admin, inflate admin view
-
+			//check if instance of user is admin controller or else (customer class) and assigned 
+			
+			
+			if (user.getClass() == AdminController.class) {
 				root = (AnchorPane) FXMLLoader.load(getClass()
 						.getResource("/views/AdminView.fxml"));
 
 				Main.stage.setTitle("Admin View");
-
-			} else {
-				// If user is customer, inflate customer view
-
-				root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/CustomerView.fxml"));
-
-				Main.stage.setTitle("Customer View");
-
 			}
+			 else {
+					// If user is customer, inflate customer view
+
+					root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/CustomerView.fxml"));
+
+					Main.stage.setTitle("Customer View");
+
+				}
+			
+		
+		
+		
+		
+		
+//		Boolean isValid = model.getCredentials(username, password);
+//		if (!isValid) {
+//			lblError.setText("User does not exist!");
+//			return;
+//		}
+//		try {
+//			AnchorPane root;
+//			if (model.isAdmin() && isValid) {
+//				// If user is admin, inflate admin view
+//
+//				root = (AnchorPane) FXMLLoader.load(getClass()
+//						.getResource("/views/AdminView.fxml"));
+//
+//				Main.stage.setTitle("Admin View");
+//
+//			} else {
+//				// If user is customer, inflate customer view
+//
+//				root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/CustomerView.fxml"));
+//
+//				Main.stage.setTitle("Customer View");
+//
+//			}
 
 			Scene scene = new Scene(root);
 			Main.stage.setScene(scene);
