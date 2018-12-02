@@ -27,6 +27,5 @@ public static Stage stage;
 	}
 	public static void main(String[] args) {
 		launch(args);
-		int i = 0;
 	}
 }
