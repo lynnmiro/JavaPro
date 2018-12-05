@@ -1,40 +1,52 @@
 package controllers;
 
-public class AdminController extends UserController implements AdminOperationsControllers{
-	Boolean admin;
+import application.Main;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+
+public class AdminController extends UserController {
 	
-	public AdminController(int id, String email, String password, boolean isAdmin) {
+
+	public AdminController(int id, String email, String password, boolean c) {
 		super(id, email, password);
-		this.admin = isAdmin;
-		
+		// TODO Auto-generated constructor stub
 	}
-	public void isAdminController() {
-		
-	}
+	static int user_id;
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+
+
+
+//	public void gototables () {
+	
+	public static void setUser(int user_id){
+	    AdminController.user_id = user_id;
+	}
+	
+//
+
+	public void gototables() {
+
+		System.exit(0);
+		try {
+			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/TableView.fxml"));
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+			Main.stage.setTitle("Table View");
+		} catch (Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
 
 	}
-	@Override
-	public void addRestaurant() {
-		// TODO Auto-generated method stub
-		
+	public void logout() {
+		System.exit(0);
+		try {
+		    AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/views/LoginView.fxml"));
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+			Main.stage.setTitle("Login");
+		} catch(Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
 	}
-	@Override
-	public void getRestaurant(int restaurantId) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void updateRestaurant(int restaurantId) {
-		// TODO Auto-generated method stub
-		
-	}
-	@Override
-	public void deleteRestaurant(int restaurantId) {
-		// TODO Auto-generated method stub
-		
-	}
-
 }
