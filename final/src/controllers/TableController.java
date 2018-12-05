@@ -1,16 +1,60 @@
 package controllers;
 
+import application.Main;
+import javafx.fxml.FXML;
+import javafx.scene.control.Label;
+import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextField;
+import models.*;
+
 public class TableController {
 	
-	private int id;
-	private int resturantid;
-	private int capacity;
+	@FXML
+	private TextField txtTableId;
+	
+	@FXML
+	private TextField txtResId;
+	
+	@FXML
+	private TextField txtCapacity;
+	
+	@FXML
+	private Label lblError;
+	
 	private boolean reservedSW;
 	
-	public TableController(int id, int resturantid, int capacity, boolean reservedSW) {
-		this.id = id;
-		this.resturantid = resturantid;
-		this.capacity = capacity;
-		this.reservedSW = reservedSW;
+	private TableModel tableModel;
+
+//	public TableController(int id, int resturantid, int capacity, boolean reservedSW) {
+//		this.txtTableId = id;
+//		this.txtResId = resturantid;
+//		this.txtCapacity = capacity;
+//		this.reservedSW = reservedSW;
+//	}
+	
+	public void addTable() {
+		int tableId = Integer.parseInt(txtTableId.getText());
+		int capacity = Integer.parseInt(txtCapacity.getText());
+		int restId = Integer.parseInt(txtResId.getText());
+		tableModel = new TableModel();
+		tableModel.addTable(tableId, capacity, restId);
 	}
+	
+	public void deleteTable() {
+		int tableId = Integer.parseInt(txtTableId.getText());
+		tableModel = new TableModel();
+		tableModel.deleteTable(tableId);
+	}
+	
+	public void updateTable(int tableID, int capacity) {
+		tableModel = new TableModel();
+		tableModel.updateTableCapacity(tableID, capacity);
+	}
+	
+	public TableModel getTable(int tableID) {
+		tableModel = new TableModel();
+		return tableModel.getTable(tableID);
+	}
+	
+	
 }
