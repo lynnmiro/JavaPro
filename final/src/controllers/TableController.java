@@ -46,14 +46,17 @@ public class TableController {
 		tableModel.deleteTable(tableId);
 	}
 	
-	public void updateTable(int tableID, int capacity) {
+	public void updateTable() {
+		int tableId = Integer.parseInt(txtTableId.getText());
+		int capacity = Integer.parseInt(txtCapacity.getText());
 		tableModel = new TableModel();
-		tableModel.updateTableCapacity(tableID, capacity);
+		tableModel.updateTableCapacity(tableId, capacity);
 	}
 	
-	public TableModel getTable(int tableID) {
+	public TableModel getTable() {
+		int tableId = Integer.parseInt(txtTableId.getText());
 		tableModel = new TableModel();
-		return tableModel.getTable(tableID);
+		return tableModel.getTable(tableId);
 	}
 	
 	
