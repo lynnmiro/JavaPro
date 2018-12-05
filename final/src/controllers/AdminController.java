@@ -27,7 +27,6 @@ public class AdminController extends UserController {
 
 	public void gototables() {
 
-		System.exit(0);
 		try {
 			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/TableView.fxml"));
 			Scene scene = new Scene(root);

@@ -1,6 +1,8 @@
 package controllers;
 
-public abstract class UserController {
+import dao.DBConnect;
+
+public abstract class UserController extends DBConnect{
 	
 	private int id;
 	private String email;
