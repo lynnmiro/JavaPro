@@ -81,6 +81,7 @@ public class TableModel extends DBConnect {
 		}
 	}
 	
+//	Update
 	public void updateTableCapacity(int tableID, int capacity) {
 		String query = "UPDATE lnt_table SET capacity = ? WHERE tableID = ?;";
 		Connection c = null;
