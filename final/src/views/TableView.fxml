@@ -2,16 +2,42 @@
 
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8.0.181" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.TableController">
-	<children>
-		<Label layoutX="240.0" layoutY="174.0" />
-		<Button layoutX="86.0" layoutY="60.0" mnemonicParsing="false" onAction="#getTable" prefHeight="39.0" prefWidth="210.0" text="Get Tabel Information" />
-		<Button layoutX="84.0" layoutY="141.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="210.0" text="Add a New Table" />
-		<Button layoutX="85.0" layoutY="228.0" mnemonicParsing="false" onAction="#updateTableCapacity" prefHeight="39.0" prefWidth="210.0" text="Update a Table" />
-		<Button layoutX="82.0" layoutY="306.0" mnemonicParsing="false" onAction="#deleteTable" prefHeight="39.0" prefWidth="210.0" text="Delete a Table" />
-	</children>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TableController">
+   <children>
+      <Label cache="true" graphicTextGap="6.0" layoutX="172.0" layoutY="40.0" prefHeight="35.0" prefWidth="308.0" text="Managing Restaurant Tables" textAlignment="CENTER" textFill="#e31010" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/reserved.jpg" />
+         </image>
+         
+      </ImageView>
+      <Label fx:id="lblCapacity" layoutX="225.0" layoutY="250.0" prefHeight="17.0" prefWidth="150.0" />
+      <Label fx:id="lblError" layoutX="169.0" layoutY="310.0" prefHeight="17.0" prefWidth="314.0" />
+      <Label fx:id="lblResId" layoutX="221.0" layoutY="310.0" prefHeight="17.0" prefWidth="150.0" />
+      <Button fx:id="btnAdd" layoutX="190.0" layoutY="169.0" mnemonicParsing="false" onAction="#goToAddTable" prefHeight="39.0" prefWidth="242.0" text="ADD a New Table" />
+      <Button fx:id="btnUpdate" layoutX="190.0" layoutY="231.0" mnemonicParsing="false" onAction="#goToUpdateTable" prefHeight="39.0" prefWidth="242.0" text="Update a Table" />
+      <Button fx:id="btnDelete" layoutX="190.0" layoutY="291.0" mnemonicParsing="false" onAction="#goToDeleteTable" prefHeight="39.0" prefWidth="242.0" text="Delete a Table" />
+      <Button fx:id="btnGet" layoutX="190.0" layoutY="111.0" mnemonicParsing="false" onAction="#goToGetTable" prefHeight="39.0" prefWidth="242.0" text="Retreive Table Information" />
+      
+   </children>
 </AnchorPane>
