@@ -20,7 +20,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TableController">
    <children>
-      <Button fx:id="btnGet" layoutX="190.0" layoutY="172.0" mnemonicParsing="false" onAction="#getTable" prefHeight="39.0" prefWidth="242.0" text="Retreive Table Information" />
+      <Button fx:id="btnGet" layoutX="190.0" layoutY="192.0" mnemonicParsing="false" onAction="#getTable" prefHeight="39.0" prefWidth="242.0" text="Retreive Table Information" />
       <TextField fx:id="txtTableId" layoutX="226.0" layoutY="115.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Table ID">
          <effect>
             <Lighting diffuseConstant="1.22" specularConstant="1.18">
@@ -53,7 +53,7 @@
          <font>
             <Font size="22.0" />
          </font></Label>
+      <Button fx:id="btnGoBack" layoutX="41.0" layoutY="172.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="39.0" prefWidth="99.0" text="Go Back" />
       
    </children>
 </AnchorPane>
-

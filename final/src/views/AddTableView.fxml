@@ -18,9 +18,9 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TableController">
+<AnchorPane fx:id="btnGoBack" maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TableController">
    <children>
-      <Button fx:id="btnAdd" layoutX="239.0" layoutY="318.0" mnemonicParsing="false" onAction="#addTable" prefHeight="39.0" prefWidth="125.0" text="Add Table" />
+      <Button fx:id="btnAdd" layoutX="239.0" layoutY="295.0" mnemonicParsing="false" onAction="#addTable" prefHeight="39.0" prefWidth="125.0" text="Add Table" />
       <TextField fx:id="txtTableId" layoutX="226.0" layoutY="115.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Table ID">
          <effect>
             <Lighting diffuseConstant="1.22" specularConstant="1.18">
@@ -45,7 +45,7 @@
       </ImageView>
       <Label layoutX="226.0" layoutY="92.0" prefHeight="17.0" prefWidth="169.0" text="Table ID" />
       <Label layoutX="225.0" layoutY="159.0" prefHeight="17.0" prefWidth="150.0" text="Table Capacity" />
-      <Label fx:id="lblError" layoutX="169.0" layoutY="310.0" prefHeight="17.0" prefWidth="314.0" />
+      <Label fx:id="lblError" layoutX="154.0" layoutY="350.0" prefHeight="17.0" prefWidth="314.0" textAlignment="CENTER" />
       <Label layoutX="226.0" layoutY="225.0" prefHeight="17.0" prefWidth="150.0" text="Restaurant ID" />
       <TextField fx:id="txtCapacity" layoutX="226.0" layoutY="181.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Capacity">
          <effect>
@@ -71,6 +71,7 @@
             </Lighting>
          </effect>
       </TextField>
+      <Button fx:id="btnGoBack" layoutX="14.0" layoutY="181.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="39.0" prefWidth="125.0" text="Go Back" />
       
    </children>
 </AnchorPane>

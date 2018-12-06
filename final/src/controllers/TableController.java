@@ -46,20 +46,35 @@ public class TableController {
 		int capacity = Integer.parseInt(txtCapacity.getText());
 		int restId = Integer.parseInt(txtResId.getText());
 		tableModel = new TableModel();
-		tableModel.addTable(tableId, capacity, restId);
+		Boolean result = tableModel.addTable(tableId, capacity, restId);
+		if(result) {
+			this.lblError.setText("Table Added Successfully!");
+		} else {
+			this.lblError.setText("There is an error to add table. Please try again!");
+		}
 	}
 
 	public void deleteTable() {
 		int tableId = Integer.parseInt(txtTableId.getText());
 		tableModel = new TableModel();
-		tableModel.deleteTable(tableId);
+		Boolean result = tableModel.deleteTable(tableId);
+		if(result) {
+			this.lblError.setText("Table Deleted Successfully!");
+		} else {
+			this.lblError.setText("There is an error to delete the table. Please try again!");
+		}
 	}
 
 	public void updateTable() {
 		int tableId = Integer.parseInt(txtTableId.getText());
 		int capacity = Integer.parseInt(txtCapacity.getText());
 		tableModel = new TableModel();
-		tableModel.updateTableCapacity(tableId, capacity);
+		Boolean result =tableModel.updateTableCapacity(tableId, capacity);
+		if(result) {
+			this.lblError.setText("Table Updated Successfully!");
+		} else {
+			this.lblError.setText("There is an error to update the table. Please try again!");
+		}
 	}
 
 	public void getTable() {
@@ -124,5 +139,18 @@ public class TableController {
 			System.out.println("Error occured while inflating view: " + e);
 		}
 
+	}
+	
+	public void goToTableView() {
+
+		// System.exit(0);
+		try {
+			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/TableView.fxml"));
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+			Main.stage.setTitle("");
+		} catch (Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
 	}
 }

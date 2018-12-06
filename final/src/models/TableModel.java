@@ -53,7 +53,7 @@ public class TableModel extends DBConnect {
 
 	
 	//adding new records to lnt_table 
-	public void addTable(int tableID, int capacity, int restaurantID) {
+	public Boolean addTable(int tableID, int capacity, int restaurantID) {
 
 		String query = "INSERT INTO lnt_table(tableID, capacity, restaurantID) VALUES (?,?,?);";
 
@@ -74,15 +74,17 @@ public class TableModel extends DBConnect {
 
 			statement.close();
 			c.close();
+			return true;
 		} catch (
 
 		SQLException e) {
 			System.out.println("Error fetching Accounts: " + e);
+			return false;
 		}
 	}
 	
 //	Update
-	public void updateTableCapacity(int tableID, int capacity) {
+	public Boolean updateTableCapacity(int tableID, int capacity) {
 		String query = "UPDATE lnt_table SET capacity = ? WHERE tableID = ?;";
 		Connection c = null;
 		PreparedStatement statement = null;
@@ -97,14 +99,16 @@ public class TableModel extends DBConnect {
 
 			statement.close();
 			c.close();
+			return true;
 
 		} catch (SQLException e) {
 			System.out.println("Error fetching Accounts: " + e);
+			return false;
 		}
 
 	}
 
-	public void deleteTable(int tableID) {
+	public boolean deleteTable(int tableID) {
 		String query = "DELETE FROM lnt_table WHERE tableID = ?;";
 
 		Connection c = null;
@@ -119,9 +123,11 @@ public class TableModel extends DBConnect {
 
 			statement.close();
 			c.close();
+			return true;
 
 		} catch (SQLException e) {
 			System.out.println("Error fetching Accounts: " + e);
+			return false;
 		}
 
 	}

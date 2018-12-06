@@ -20,7 +20,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TableController">
    <children>
-      <Button fx:id="btnUpdate" layoutX="238.0" layoutY="298.0" mnemonicParsing="false" onAction="#updateTable" prefHeight="39.0" prefWidth="139.0" text="Update Table" />
+      <Button fx:id="btnUpdate" layoutX="241.0" layoutY="284.0" mnemonicParsing="false" onAction="#updateTable" prefHeight="39.0" prefWidth="139.0" text="Update Table" />
       <TextField fx:id="txtTableId" layoutX="226.0" layoutY="124.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Table ID">
          <effect>
             <Lighting diffuseConstant="1.22" specularConstant="1.18">
@@ -45,7 +45,7 @@
       </ImageView>
       <Label layoutX="226.0" layoutY="101.0" prefHeight="17.0" prefWidth="169.0" text="Table ID" />
       <Label layoutX="225.0" layoutY="183.0" prefHeight="17.0" prefWidth="150.0" text="Table Capacity" />
-      <Label fx:id="lblError" layoutX="169.0" layoutY="310.0" prefHeight="17.0" prefWidth="314.0" />
+      <Label fx:id="lblError" layoutX="187.0" layoutY="345.0" prefHeight="27.0" prefWidth="248.0" />
       <TextField fx:id="txtCapacity" layoutX="226.0" layoutY="210.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Capacity">
          <effect>
             <Lighting diffuseConstant="1.22" specularConstant="1.18">
@@ -58,8 +58,7 @@
             </Lighting>
          </effect>
       </TextField>
+      <Button fx:id="btnGoBack" layoutX="26.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="39.0" prefWidth="139.0" text="Go Back" />
       
    </children>
 </AnchorPane>
-
-
