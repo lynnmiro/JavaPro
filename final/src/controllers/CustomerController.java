@@ -1,6 +1,16 @@
 package controllers;
 
+import application.Main;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.scene.layout.AnchorPane;
+
 public class CustomerController extends UserController implements CustomerOperationsController {
+	
+	
+	public CustomerController() {
+		
+	}
 	
 	private String phoneNum;
 
@@ -30,6 +40,18 @@ public class CustomerController extends UserController implements CustomerOperat
 	public void deleteReservation(int reservationId) {
 		// TODO Auto-generated method stub
 		
+	}
+	
+	public void logout() {
+		System.exit(0);
+		try {
+		    AnchorPane root = (AnchorPane)FXMLLoader.load(getClass().getResource("/views/LoginView.fxml"));
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+			Main.stage.setTitle("Login");
+		} catch(Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
 	}
 
 }
