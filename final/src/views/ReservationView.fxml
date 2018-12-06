@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/10.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ReservationController">
    <children>
       <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
          <image>
@@ -21,10 +21,11 @@
             <Font size="20.0" />
          </font>
       </Label>
-      <Button layoutX="322.0" layoutY="295.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="67.0" text="Log Out" />
       <TextField layoutX="262.0" layoutY="213.0" promptText="month/day/year" />
       <TextField layoutX="262.0" layoutY="143.0" promptText="ex. 3" />
       <Label layoutX="262.0" layoutY="120.0" text="Number of Guests" />
       <Label layoutX="262.0" layoutY="192.0" text="Time" />
+      <Button layoutX="322.0" layoutY="295.0" mnemonicParsing="false" onAction="#logout" prefHeight="27.0" prefWidth="67.0" text="Log Out" />
+      
    </children>
 </AnchorPane>

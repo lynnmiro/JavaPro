@@ -21,6 +21,14 @@ public class CustomerController extends UserController implements CustomerOperat
 	@Override
 	public void makeReservation() {
 		// TODO Auto-generated method stub
+		try {
+			AnchorPane root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/ReservationView.fxml"));
+			Scene scene = new Scene(root);
+			Main.stage.setScene(scene);
+			Main.stage.setTitle("Reservation View");
+		} catch (Exception e) {
+			System.out.println("Error occured while inflating view: " + e);
+		}
 		
 	}
 

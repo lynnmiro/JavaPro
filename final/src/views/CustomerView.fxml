@@ -15,7 +15,7 @@
          </image>
          
       </ImageView>
-      <Button layoutX="200.0" layoutY="150.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" text="Make Reservation" />
+      <Button layoutX="200.0" layoutY="150.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" text="Make Reservation" onAction="#makeReservation" />
       <Button layoutX="361.0" layoutY="150.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="139.0" text="Delete Reservation" textFill="#e42b2b" />
       <Button layoutX="200.0" layoutY="189.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="150.0" text="Update Reservation" />
       <Button layoutX="361.0" layoutY="189.0" mnemonicParsing="false" prefHeight="27.0" prefWidth="139.0" text="View Reservation" />
