@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.Light.Distant?>
+<?import javafx.scene.effect.Lighting?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="400" prefWidth="600" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.TableController">
+   <children>
+      <Button fx:id="btnAdd" layoutX="239.0" layoutY="318.0" mnemonicParsing="false" onAction="#addTable" prefHeight="39.0" prefWidth="125.0" text="Add Table" />
+      <TextField fx:id="txtTableId" layoutX="226.0" layoutY="115.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Table ID">
+         <effect>
+            <Lighting diffuseConstant="1.22" specularConstant="1.18">
+               <bumpInput>
+                  <Shadow blurType="TWO_PASS_BOX" height="199.04" radius="102.79499999999999" width="214.14" />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#fcf6f6" />
+               </light>
+            </Lighting>
+         </effect></TextField>
+      <Label cache="true" graphicTextGap="6.0" layoutX="221.0" layoutY="40.0" prefHeight="35.0" prefWidth="291.0" text="Add New Restaurant Table" textAlignment="CENTER" textFill="#e31010" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="180.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../image/reserved.jpg" />
+         </image>
+         
+      </ImageView>
+      <Label layoutX="226.0" layoutY="92.0" prefHeight="17.0" prefWidth="169.0" text="Table ID" />
+      <Label layoutX="225.0" layoutY="159.0" prefHeight="17.0" prefWidth="150.0" text="Table Capacity" />
+      <Label fx:id="lblError" layoutX="169.0" layoutY="310.0" prefHeight="17.0" prefWidth="314.0" />
+      <Label layoutX="226.0" layoutY="225.0" prefHeight="17.0" prefWidth="150.0" text="Restaurant ID" />
+      <TextField fx:id="txtCapacity" layoutX="226.0" layoutY="181.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Capacity">
+         <effect>
+            <Lighting diffuseConstant="1.22" specularConstant="1.18">
+               <bumpInput>
+                  <Shadow blurType="TWO_PASS_BOX" height="199.04" radius="102.79499999999999" width="214.14" />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#fcf6f6" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      <TextField fx:id="txtResId" layoutX="226.0" layoutY="246.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Capacity">
+         <effect>
+            <Lighting diffuseConstant="1.22" specularConstant="1.18">
+               <bumpInput>
+                  <Shadow blurType="TWO_PASS_BOX" height="199.04" radius="102.79499999999999" width="214.14" />
+               </bumpInput>
+               <light>
+                  <Light.Distant color="#fcf6f6" />
+               </light>
+            </Lighting>
+         </effect>
+      </TextField>
+      
+   </children>
+</AnchorPane>
