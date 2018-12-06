@@ -7,6 +7,10 @@ public abstract class UserController {
 	private String email;
 	private String password;
 	
+	public UserController() {
+		
+	}
+	
 	protected UserController(int id, String email, String password) {
 		this.id = id;
 		this.email = email;

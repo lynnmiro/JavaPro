@@ -69,9 +69,10 @@ public class LoginController {
 			
 			
 			if (user.getClass() == AdminController.class) {
+				
 				root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/AdminView.fxml"));
-
 				Main.stage.setTitle("Admin View");
+				System.out.println("we are here");
 			}
 			else {
 				// If user is customer, inflate customer view
@@ -81,11 +82,13 @@ public class LoginController {
 				Main.stage.setTitle("Customer View");
 
 			}
+
 			Scene scene = new Scene(root);
 			Main.stage.setScene(scene);
 
 		} catch (Exception e) {
 			System.out.println("Error occured while inflating view: " + e);
+			throw new RuntimeException(e);
 		}
 
 	}
