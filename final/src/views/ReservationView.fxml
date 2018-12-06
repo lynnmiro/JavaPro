@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.181"
+ xmlns:fx="http://javafx.com/fxml/1"
+ fx:controller="Controllers.ReservationController">
+ <children>
+		<Label layoutX="240.0" layoutY="174.0" text="Reservation Menu" />
+		<Button layoutX="86.0" layoutY="60.0" mnemonicParsing="false"
+			onAction="#getReserve" prefHeight="39.0" prefWidth="210.0"
+			text="Get Reservation Status" />
+		<Button layoutX="86.0" layoutY="60.0" mnemonicParsing="false"
+			onAction="#updateReserve" prefHeight="39.0" prefWidth="210.0"
+			text="Modify your reservation" />
+		<Button layoutX="86.0" layoutY="60.0" mnemonicParsing="false"
+			onAction="#deleteReserve" prefHeight="39.0" prefWidth="210.0"
+			text="Cancel your reservation" />
+	</children>
+</AnchorPane>
+
