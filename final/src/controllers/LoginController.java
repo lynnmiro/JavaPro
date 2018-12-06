@@ -69,49 +69,18 @@ public class LoginController {
 			
 			
 			if (user.getClass() == AdminController.class) {
-				root = (AnchorPane) FXMLLoader.load(getClass()
-						.getResource("/views/AdminView.fxml"));
+				root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/AdminView.fxml"));
 
 				Main.stage.setTitle("Admin View");
 			}
-			 else {
-					// If user is customer, inflate customer view
+			else {
+				// If user is customer, inflate customer view
+	
+				root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/CustomerView.fxml"));
+	
+				Main.stage.setTitle("Customer View");
 
-					root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/CustomerView.fxml"));
-
-					Main.stage.setTitle("Customer View");
-
-				}
-			
-		
-		
-		
-		
-		
-//		Boolean isValid = model.getCredentials(username, password);
-//		if (!isValid) {
-//			lblError.setText("User does not exist!");
-//			return;
-//		}
-//		try {
-//			AnchorPane root;
-//			if (model.isAdmin() && isValid) {
-//				// If user is admin, inflate admin view
-//
-//				root = (AnchorPane) FXMLLoader.load(getClass()
-//						.getResource("/views/AdminView.fxml"));
-//
-//				Main.stage.setTitle("Admin View");
-//
-//			} else {
-//				// If user is customer, inflate customer view
-//
-//				root = (AnchorPane) FXMLLoader.load(getClass().getResource("/views/CustomerView.fxml"));
-//
-//				Main.stage.setTitle("Customer View");
-//
-//			}
-
+			}
 			Scene scene = new Scene(root);
 			Main.stage.setScene(scene);
 

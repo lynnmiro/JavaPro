@@ -26,7 +26,7 @@
             <Font size="25.0" />
          </font>
       </Label>
-      <Button layoutX="324.0" layoutY="235.0" mnemonicParsing="false" onAction="#gototables" text="Go to Tables" textOverrun="CENTER_WORD_ELLIPSIS">
+      <Button layoutX="324.0" layoutY="235.0" mnemonicParsing="false" onAction="logout" text="Go to Tables" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
             <Font name="Euphemia UCAS" size="13.0" />
          </font>

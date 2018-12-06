@@ -20,25 +20,21 @@ public class LoginModel extends DBConnect {
 		this.admin = admin;
 	}
 	
-	public UserController getCredentials(String username, String password){
+	public UserController getCredentials(String email, String password){
 			UserController user;
         	String query = "SELECT * FROM userlnt WHERE username = ? and password = ?;";
             try(PreparedStatement stmt = connection.prepareStatement(query)) {
-               stmt.setString(1, username);
+               stmt.setString(1, email);
                stmt.setString(2, password);
                ResultSet rs = stmt.executeQuery();
                 if(rs.next()) { 
-                	//if(password.equals(rs.getString("password")) && username.equals(rs.getString("username"))) {
                 	if (rs.getBoolean("admin")) {
-                		user = new AdminController(rs.getInt("id"), username, password, true);
+                		user = new AdminController(rs.getInt("id"), email, password);
                 	}
                 	else {
-                		user = new CustomerController(rs.getInt("id"), username, password);
+                		user = new CustomerController(rs.getInt("id"), email, password);
                 	}
-                	//setAdmin(rs.getBoolean("admin"));
                 	return user;
-                	
-                	//}
                 }
              }catch (SQLException e) {
             	e.printStackTrace();   
