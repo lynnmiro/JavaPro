@@ -45,7 +45,6 @@ public class UserModel extends DBConnect {
 				user.setEmail(resultSet.getString("email"));
 				user.setPassword(resultSet.getString("password"));
 			}
-			System.out.println("Mi");
 			statement.close();
 			c.close();
 		} catch (

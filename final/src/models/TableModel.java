@@ -43,9 +43,7 @@ public class TableModel extends DBConnect {
 
 			statement.close();
 			c.close();
-		} catch (
-
-		SQLException e) {
+		} catch (SQLException e) {
 			System.out.println("Error fetching Accounts: " + e);
 		}
 		return table;
@@ -75,9 +73,7 @@ public class TableModel extends DBConnect {
 			statement.close();
 			c.close();
 			return true;
-		} catch (
-
-		SQLException e) {
+		} catch (SQLException e) {
 			System.out.println("Error fetching Accounts: " + e);
 			return false;
 		}
