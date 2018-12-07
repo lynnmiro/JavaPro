@@ -54,6 +54,7 @@
             <Font size="22.0" />
          </font></Label>
       <Button fx:id="btnGoBack" layoutX="41.0" layoutY="172.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="39.0" prefWidth="99.0" text="Go Back" />
+      <Button fx:id="btnGoBack1" layoutX="41.0" layoutY="347.0" mnemonicParsing="false" onAction="#goToGetTable" prefHeight="39.0" prefWidth="202.0" text="Retrieve a New Table" />
       
    </children>
 </AnchorPane>

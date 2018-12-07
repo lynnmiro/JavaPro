@@ -72,6 +72,7 @@
          </effect>
       </TextField>
       <Button fx:id="btnGoBack" layoutX="14.0" layoutY="181.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="39.0" prefWidth="125.0" text="Go Back" />
+      <Button fx:id="btnAdd1" layoutX="14.0" layoutY="233.0" mnemonicParsing="false" onAction="#goToAddTable" prefHeight="39.0" prefWidth="169.0" text="Add a NewTable" />
       
    </children>
 </AnchorPane>

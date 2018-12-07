@@ -45,7 +45,7 @@
       </ImageView>
       <Label layoutX="226.0" layoutY="101.0" prefHeight="17.0" prefWidth="169.0" text="Table ID" />
       <Label layoutX="225.0" layoutY="183.0" prefHeight="17.0" prefWidth="150.0" text="Table Capacity" />
-      <Label fx:id="lblError" layoutX="187.0" layoutY="345.0" prefHeight="27.0" prefWidth="248.0" />
+      <Label fx:id="lblError" layoutX="241.0" layoutY="339.0" prefHeight="27.0" prefWidth="248.0" />
       <TextField fx:id="txtCapacity" layoutX="226.0" layoutY="210.0" prefHeight="39.0" prefWidth="169.0" promptText="Enter Capacity">
          <effect>
             <Lighting diffuseConstant="1.22" specularConstant="1.18">
@@ -59,6 +59,7 @@
          </effect>
       </TextField>
       <Button fx:id="btnGoBack" layoutX="26.0" layoutY="177.0" mnemonicParsing="false" onAction="#goToTableView" prefHeight="39.0" prefWidth="139.0" text="Go Back" />
+      <Button fx:id="btnUpdate1" layoutX="26.0" layoutY="333.0" mnemonicParsing="false" onAction="#goToUpdateTable" prefHeight="39.0" prefWidth="205.0" text="Update a New Table" />
       
    </children>
 </AnchorPane>
