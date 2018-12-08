@@ -40,7 +40,7 @@ public class TableController {
 //		this.txtCapacity = capacity;
 //		this.reservedSW = reservedSW;
 //	}
-
+// all the following methods are going to be used to connect views with table models
 	public void addTable() {
 		int tableId = Integer.parseInt(txtTableId.getText());
 		int capacity = Integer.parseInt(txtCapacity.getText());
